@@ -22,12 +22,12 @@ public class ProducerDemo {
     //Create producer record
     ProducerRecord<String, String> record = new ProducerRecord<String, String>("first_topic", "hello world");
 
-    //send data
+    //send data - Async
     producer.send(record);
 
     //Flush data and close producer
     producer.flush();
-    producer.close();g
+    producer.close();
 
   }
 }
